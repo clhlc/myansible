@@ -1,0 +1,9 @@
+#---
+- name: date
+  shell: date
+  listen: "restart web services"
+
+
+- name: w
+  shell: w
+  listen: "restart web services"

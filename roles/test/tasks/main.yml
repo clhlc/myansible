@@ -1,0 +1,21 @@
+---
+- name: list /var
+  shell: ls /var
+  notify: "restart web services"
+
+- meta: flush_handlers
+
+- pause:
+    prompt: "test mag"
+
+- name: others tasks
+  shell: whoami
+  register: msg
+
+- debug: var=msg.stdout_lines
+  
+- name:  simulate long running
+  command: date
+
+- name:  simulate long running
+  command: date

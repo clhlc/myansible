@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  gather_facts: no
+  remote_user: leechao
+  serial: 10%
+  
+  pre_tasks:
+    - debug: msg="pre_tasks"
+
+  roles:
+    - {role: test}
